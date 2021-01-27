@@ -51,3 +51,74 @@
 
 ## 1.4 初次运行Git前的配置
 
+### 设置用户名和邮件地址
+
+~~~shell
+$ git config --global user.name "John Doe" 
+$ git config --global user.email johndoe@example.com
+~~~
+
+## 1.5 GIT基础
+
+### 在已存在目录中初始化仓库
+
+```shell
+$ git init
+$ git add *.c
+$ git add LICENSE
+$ git commit -m 'initial project version'
+```
+
+### 克隆现有的仓库
+
+```shell
+$ git clone https://github.com/libgit2/libgit2
+```
+
+### 记录每次更新到仓库
+
+* 工作目录下文件状态:  **已跟踪** 和 **未跟踪**
+
+![Git 下文件生命周期图。](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
+### 检查当前文件状态
+
+```shell
+$ git status
+$ git status -s
+```
+
+### 跟踪新文件和暂存已经修改的文件
+
+~~~ shell
+$ git add 
+~~~
+
+### 忽略文件
+
+```shell
+$cat .gitignore
+*.[oa] #忽略.o和.a结尾的文件
+*~     #忽略.~结尾的文件
+```
+
+```shell
+# 忽略所有的 .a 文件
+*.a
+# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+!lib.a
+# 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
+/TODO
+# 忽略任何目录下名为 build 的文件夹
+build/
+# 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt
+doc/*.txt
+# 忽略 doc/ 目录及其所有子目录下的 .pdf 文件
+doc/**/*.pdf
+```
+
+### 查看已暂存和未暂存的修改
+
+#### 当前做的哪些更新尚未暂存? 有哪些更新已暂存并准备好下次提交?
+
+>git diff 可以通过文件补丁的格式更加具体显示哪些行发生了变化
