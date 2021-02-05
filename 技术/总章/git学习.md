@@ -359,14 +359,14 @@ $ git merge experiment
 >
 >    ~~~shell
 >    ssh-keygen -f king -C king
->    ssh-keygen -f github549942844 -C king2046@github
->    ssh-keygen -f gitee13456367274 -C king@gitee
+>    ssh-keygen -f githubxxx -C one@github
+>    ssh-keygen -f giteexxxx -C one@gitee
 >    ~~~
 >
 >    5.复制密钥到服务器上
 >
 >    ~~~shell
->    ssh-copy-id -i .ssh/king.pub root@115.238.54.122 -p 10086
+>    ssh-copy-id -i .ssh/xxx.pub root@1.1.1.1 -p 22
 >    ~~~
 >
 >    6.多个密钥对应不同github（**有坑，计算机名称和用户名不能一样**）
