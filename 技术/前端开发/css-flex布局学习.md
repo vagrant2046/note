@@ -64,7 +64,7 @@
 }
 
 .item {
-  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+  flex: none | [ <'flex-grow'> <'flex-shrink'> || <'flex-basis'> ]
 }
 .item {
   flex-grow: <number>; /* default 0 */

@@ -59,7 +59,10 @@ grid-row-end属性：下边框所在的水平网格线
   grid-column-end: 4;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> css-Grid学习
 ~~~
 
