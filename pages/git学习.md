@@ -239,7 +239,6 @@
 		- 实验和回滚
 			- 可以在分支上做一些实验性工作，不满意可以轻松删除分支，不影响其他部分代码
 	- 分支的新建与合并
-	  collapsed:: true
 		- ```git
 		  #创建并切换到branchname分支
 		  git checkout -b branchname
@@ -280,7 +279,6 @@
 		- 主题分支
 			- 短期分支，用来实现单一特性或者其他工作
 	- 远程分支
-	  collapsed:: true
 		- 什么叫远程分支？
 			- 指存储在远程仓库中的分支
 			- 本地仓库通过 `fetch` 或 `pull` 来获取它们的更新
@@ -348,6 +346,7 @@
 		  git clone --bare my_project my_project.git
 		  ```
 - 6.分布式Git-分布式工作流
+  collapsed:: true
 	- 集中式工作流
 		- 项目有一个主分支，所有的开发者都直接将他们的代码提交到这个分支。
 		- 每个开发者首先克隆中央仓库的代码到本地，然后在本地进行开发。
@@ -372,3 +371,40 @@
 		  #step3：提交信息规范模板如下
 		  ```
 		- ![image.png](../assets/image_1728549838053_0.png)
+- 7.github工作流
+  collapsed:: true
+	- 开源项目
+	  collapsed:: true
+		- 1.fork副本并克隆到本地
+		- 2.创建出名称有意义的分支
+		- 3.修改代码
+		- 4.检查改动 `git diff --word-diff`
+		- 5.将改动提交到分支中
+		- 6.将新分支推送到 GitHub 的副本中
+		- 7.拉取请求按钮 `Compare & pull request`
+		- 8.拉取请求创建页面 `Create pull request`
+		- 9.项目拥有者审核，讨论，决定是否合并或拒绝
+	- note：如果你和协作者对项目都有写入权限，不必每次都fork项目
+	  collapsed:: true
+		- 1.你在仓库中创建一个新的分支，例如 `feature/new-login-system`，用于实现登录系统的新功能。
+		- 2.在该分支上进行开发和测试
+		- 3.完成开发后，你可以在 GitHub 上提交一个拉取请求（Pull Request），将你的 `feature/new-login-system` 分支合并到主分支（如 master）。
+		- 4.你的团队成员可以查看、审查你的代码，并在拉取请求中发表评论，讨论任何问题或改进建议。
+		- 5.经过审查和测试后，拉取请求被批准，你的分支可以合并到主分支，成为项目的一部分。
+	- 拉取请求的进阶用法
+	  collapsed:: true
+		- 与上游保持同步
+			- 1.将源版本库添加为一个远端，并命名为“upstream”（上游）
+				- `git remote add upstream https://github.com/schacon/blink`
+			- 2.从远端抓取最新的内容
+				- `git fetch upstream`
+			- 3.将该仓库的主分支的内容合并到你的分支中
+				- `git merge upstream/master`
+			- 4.修复产生的冲突
+				- `vim blink.ino`
+			- 5.再推送回同一个分支
+				- `git push origin slow-blink`
+	- gihub脚本
+		- webhook给你提供了一种方式来接收关于在仓库中发生的事件的推送通知
+		- GitHub API
+- 8.git工具
