@@ -1,5 +1,6 @@
 - #git #技术
 - 1.学习资料:
+  collapsed:: true
 	- 官方网站：https://git-scm.com
 	- 交互互动：https://learngitbranching.js.org
 	- 学习路线：https://roadmap.sh/git-github
@@ -227,11 +228,9 @@
 - 4.Git分支
   collapsed:: true
 	- 定义：
-	  collapsed:: true
 		- 分支（branch）是指项目的一个独立的开发路线，是代码历史的并行版本。
 		- 分支是代码的一个指针，指向某个提交（commit）
 	- 为什么？
-	  collapsed:: true
 		- 独立开发
 			- 可以在一个新分支上进行功能开发或者修复bug，不影响主分支的稳定性
 		- 并行工作
@@ -409,11 +408,9 @@
 		- GitHub API
 - 8.git工具
 - 9.其他
-  collapsed:: true
 	- 同时提交2个不同平台
 		- `git remote set-url --add origin https://gitee.com/your-username/your-repo.git`
 - 10.Git工具
-  collapsed:: true
 	- 交互式暂存
 		- 当你在修改大量文件后，希望这些改动拆分为若干提交而不是混杂在一起成为一个提交
 		- 可以确保提交是逻辑上独立的变更集，同时也会同时使其他开发者与你工作时很容易审核
