@@ -4,12 +4,10 @@
 	- [官方文档](https://developer.hashicorp.com/vagrant/docs)
 	- [熟练使用vagrant](https://www.junmajinlong.com/virtual/index/#vagrant)
 - 2.vagrant简介
-  collapsed:: true
 	- 用于管理和构建虚拟机环境的工具
 	- 提供易于配置、可重复和便携式的开发环境
 	- 跨操作系统，提供一致的开发环境
 - 3.安装
-  collapsed:: true
 	- vagrant 安装
 		- [Vagrant downloads page](https://developer.hashicorp.com/vagrant/install)
 	- VirtualBox 安装
@@ -32,14 +30,12 @@
 			  #powershell中$env:VAGRANT_HOME
 			  ```
 - 4.创建虚拟机
-  collapsed:: true
 	- ```shell
 	  vagrant init hashicorp/bionic64
 	  vagrant up #启动
 	  vagrant destroy #销毁
 	  ```
 - 5.常用命令
-  collapsed:: true
 	- | 子命令 | 功能说明 |
 	  | ---- | ---- | ---- |
 	  | box | 管理box镜像(box是创建虚拟机的模板) |
@@ -57,7 +53,6 @@
 	  | ssh-config | 输出ssh连接虚拟机时使用的配置项 |
 	  | port | 查看各虚拟机映射的端口列表(hyperv不支持该功能) |
 - 6.查看虚拟机状态
-  collapsed:: true
 	- ```shell
 	  vagrant status
 	  vagrant global-status
@@ -72,7 +67,6 @@
 		  vagrant ssh 2f5
 		  ```
 - 7.添加虚拟机模板
-  collapsed:: true
 	- ```powershell
 	  #第一种直接添加官方镜像box
 	  vagrant init debian/bookworm64
