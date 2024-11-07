@@ -1,12 +1,15 @@
+- #php
 - 参考链接：https://blog.vgot.net/archives/xdebug3-in-homestead-via-phpstorm-vscode.html
 - xdebug3配置安装
 - https://xdebug.org/
 - step1下载安装xdebug
+  collapsed:: true
 	- 通过`php -i` 获得的信息填入下面网址，获得合适的安装指南
 		- https://xdebug.org/wizard
 	- 或者找到对应的安装方式进行安装
 		- https://xdebug.org/docs/install
 - step2设置xdebug
+  collapsed:: true
 	- 安装完成后通过`php -i` 查看是否安装成功
 	- 通过`php --ini`找到xdebug.ini
 		- `/etc/php/8.2/cli/conf.d/20-xdebug.ini`
@@ -35,6 +38,7 @@
 		  sudo systemctl restart php8.2-fpm
 		  ```
 - step3配置IDE和浏览器
+  collapsed:: true
 	- PHPSTORM
 		- 文件-设置-PHP-CLI解释器
 			- ![image.png](../assets/image_1730775619327_0.png){:height 373, :width 590}
@@ -78,6 +82,7 @@
 		- https://chromewebstore.google.com/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc
 		- 右键选项-IDE key
 - step4验证
+  collapsed:: true
 	- ```php
 	  xdebug_info();
 	  phpinfo();
