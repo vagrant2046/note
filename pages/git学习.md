@@ -57,7 +57,6 @@
 			  ```
 			-
 - 3.Git基础
-  collapsed:: true
 	- 初始化仓库
 	  collapsed:: true
 		- ```git
@@ -74,7 +73,6 @@
 		  git status
 		  ```
 	- 添加跟踪新文件
-	  collapsed:: true
 		- ```git
 		  git add
 		  ```
@@ -226,7 +224,6 @@
 		  git config --global alias.lg=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 		  ```
 - 4.Git分支
-  collapsed:: true
 	- 定义：
 		- 分支（branch）是指项目的一个独立的开发路线，是代码历史的并行版本。
 		- 分支是代码的一个指针，指向某个提交（commit）
