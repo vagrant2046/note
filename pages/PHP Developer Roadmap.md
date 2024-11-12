@@ -8,5 +8,5 @@
 	- How does the internet work? (Full Course)
 		- 1h 42m
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
-- 2.
+- 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
 -
