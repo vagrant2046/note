@@ -5,14 +5,12 @@
 	- 交互互动：https://learngitbranching.js.org
 	- 学习路线：https://roadmap.sh/git-github
 - 1.起步
-  collapsed:: true
 	- 什么是版本控制 ？
 		- 记录一个或若干文件内容变化
 		- 将来可查阅特定版本修订情况的系统
 	- 发展历程
 		- 本地版本控制系统->集中化的版本控制系统->分布式版本控制系统
 - 2.Git简史
-  collapsed:: true
 	- Linus Torvalds 因为 BitKeeper 收回于2005年开发
 	- Git是什么？
 	  collapsed:: true
@@ -57,14 +55,11 @@
 			  ```
 			-
 - 3.Git基础
-  collapsed:: true
 	- 初始化仓库
-	  collapsed:: true
 		- ```git
 		  git init
 		  ```
 	- 其他服务器克隆仓库
-	  collapsed:: true
 		- ```git
 		  git clone https://github.com/libgit2/libgit2
 		  ```
@@ -74,12 +69,10 @@
 		  git status
 		  ```
 	- 添加跟踪新文件
-	  collapsed:: true
 		- ```git
 		  git add
 		  ```
 	- 忽略文件
-	  collapsed:: true
 		- 建立`.gitignore`文件
 		- ```
 		  # 忽略所有的 .a 文件
@@ -101,7 +94,6 @@
 		  doc/**/*.pdf
 		  ```
 	- 查看已暂存和未暂存的修改
-	  collapsed:: true
 		- ```git
 		  git status
 		  #未暂存的文件更新了哪些部分
@@ -111,14 +103,12 @@
 		  git diff --cached
 		  ```
 	- 提交更新
-	  collapsed:: true
 		- ```git
 		  git commit
 		  git commit -m
 		  git commit -a # -a 就是git add所有文件了
 		  ```
 	- 移除文件
-	  collapsed:: true
 		- ```git
 		  git rm * #删除并取消跟踪
 		  git rm --cached #取消跟踪但不删除
@@ -159,7 +149,6 @@
 		  git checkout -- <file>
 		  ```
 	- 远程仓库的使用
-	  collapsed:: true
 		- ```git
 		  #查看远程仓库信息
 		  git remote
@@ -226,7 +215,6 @@
 		  git config --global alias.lg=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 		  ```
 - 4.Git分支
-  collapsed:: true
 	- 定义：
 		- 分支（branch）是指项目的一个独立的开发路线，是代码历史的并行版本。
 		- 分支是代码的一个指针，指向某个提交（commit）
