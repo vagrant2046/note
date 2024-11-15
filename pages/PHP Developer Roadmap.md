@@ -1,12 +1,27 @@
 - 1.**[How Internet & Websites works](https://github.com/thecodeholic/php-developer-roadmap#how-internet--websites-works)**
 	- How does the INTERNET work?
-		- 9m
-		- [https://youtu.be/x3c1ih2NJEg](https://youtu.be/x3c1ih2NJEg)
+	  collapsed:: true
+		- 9m https://www.youtube.com/watch?v=x3c1ih2NJEg
+		- IP
+			- 网络地址标识符
+		- 域名
+			- IP的别名
+		- DNS
+			- 记录IP和对应域名的字典
+		- 协议
+			- TCP/IP
+			- HTTP/HTTPS
+			- RTP
+			- 保证信息能按照约定正确的传输到指定位置
+		-
 	- How The Web Works - The Big Picture
+	  collapsed:: true
 		- 12m
-		- [https://youtu.be/hJHvdBlSxug](https://youtu.be/hJHvdBlSxug)
+		- https://www.youtube.com/watch?v=hJHvdBlSxug
+		- ![1111.png](../assets/1111_1731565910603_0.png)
 	- How does the internet work? (Full Course)
 		- 1h 42m
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
 - 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
+-
 -
