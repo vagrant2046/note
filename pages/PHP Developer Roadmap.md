@@ -2,26 +2,46 @@
 	- How does the INTERNET work?
 	  collapsed:: true
 		- 9m https://www.youtube.com/watch?v=x3c1ih2NJEg
-		- IP
-			- 网络地址标识符
-		- 域名
-			- IP的别名
-		- DNS
-			- 记录IP和对应域名的字典
-		- 协议
-			- TCP/IP
-			- HTTP/HTTPS
-			- RTP
-			- 保证信息能按照约定正确的传输到指定位置
-		-
 	- How The Web Works - The Big Picture
 	  collapsed:: true
-		- 12m
-		- https://www.youtube.com/watch?v=hJHvdBlSxug
-		- ![1111.png](../assets/1111_1731565910603_0.png)
+		- 12m https://www.youtube.com/watch?v=hJHvdBlSxug
 	- How does the internet work? (Full Course)
+	  collapsed:: true
 		- 1h 42m
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
+	- https://roadmap.sh/guides/what-is-internet
+		- 什么是互联网？
+		  collapsed:: true
+			- 互相连接的计算机组成的全球网络
+			- 通过标准化的协议进行通信
+		- 信息如何在互联网上传输？
+		  collapsed:: true
+			- Internet 上的信息通过各种介质（包括以太网电缆、光纤电缆和无线信号（即无线电波））以比特的形式从一台计算机移动到另一台计算机。
+		- 网络如何互相通信，以及其中的协议？
+			- IP
+				- 电脑的网络地址标识符
+			- 域名
+				- IP的别名
+			- DNS
+				- IP和域名的映射表
+			-
+		- 数据包、路由器和可靠性之间有什么关系？
+		  collapsed:: true
+			- 数据包
+				- 网络上传输的数据包不需要遵循固定路径
+				- 数据包可以分成多个小包按不同路径抵达目的地
+			- 路由器
+				- 包的中转站，控制包的路径选择以及检查包的完整性安全性
+			- 可靠性
+				- 通过TCP协议保证传输的可靠性
+		- HTTP 和 HTML – 您如何在浏览器中查看此网页？
+			- ![网页如何看到的](../assets/1111_1731565910603_0.png){:height 373, :width 592}
+		- 互联网上的信息传输如何确保安全？
+			- ssl、tls
+			- 非对称加密
+		- 什么是网络安全，有哪些常见的互联网犯罪？
+			- 网络安全是指通过使用网络、技术设备和互联网实现的针对犯罪活动的保护措施
+			-
 - 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
 -
 -
