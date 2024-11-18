@@ -20,8 +20,14 @@
 		- https://www.youtube.com/watch?v=hJHvdBlSxug
 		- ![1111.png](../assets/1111_1731565910603_0.png)
 	- How does the internet work? (Full Course)
+	  collapsed:: true
 		- 1h 42m
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
+	- 个人总结：
+		- 互联网是通过网线（包括无线）彼此连接起来的大型网络系统，其中有几个关键的组件如交换机、路由器、ISP等
+		- IP相当于地址标识符，单因为IP长而不易记忆，所以有了域名（IP的别名）通过DNS（实质是IP和域名对应表）来访问网站
 - 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
+	- HTTP Crash Course & Exploration
+		- https://www.youtube.com/watch?v=iYM2zFP3Zn0
 -
 -
