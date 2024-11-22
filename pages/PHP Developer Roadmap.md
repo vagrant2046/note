@@ -122,10 +122,278 @@
 			- **500 Internal Server Error**
 			- **502 Bad Gateway**
 - 3. Basics of HTML/CSS
-	- 语义化HTML
-	  collapsed:: true
-		- ![a-layout-a-header-three-31026f6b6c4b4_856.png](../assets/a-layout-a-header-three-31026f6b6c4b4_856_1731999967538_0.png){:height 389, :width 457}
+	- HTML
+		- 1.什么是HTML
+		  collapsed:: true
+			- 超文本标记语言
+		- 2.什么是HTML Element（元素）
+		  collapsed:: true
+			- HTML **元素**是从 start 标签到 end 标签的所有内容
+		- 3.HTML  Basic
+		  collapsed:: true
+			- 1.必须声明文档类型`<!DOCTYPE html>`
+			- 2.开始于 `<html>`结束于`</html>`
+			- 3.`<body>` 和`</body>`之间存放可见部分
+			  collapsed:: true
+				- ```html
+				  <!DOCTYPE html>
+				  <html>
+				    <body>
+				    </body>
+				  </html>
+				  ```
+			- 4.HTML 标题
+			  collapsed:: true
+				- `<h1>`-`<h6>`
+				- `<h1>` 定义最重要的标题。`<h6>` 定义最不重要的标题
+			- 5.HTML 段落
+			  collapsed:: true
+				- `<p>`
+			- 6.HTML 链接
+			  collapsed:: true
+				- `<a>`
+				  collapsed:: true
+					- _self
+					- _blank
+					- _parent
+					- _top
+				- 页面bookmark
+					- ```html
+					  <h2 id="C4">Chapter 4</h2>
+					  <a href="#C4">Jump to Chapter 4</a>
+					  ```
+			- 7.HTML 图像
+			  collapsed:: true
+				- `<img>`
+				- 源文件 （`src`）、替代文本 （`alt`）、`width` 和 `height` 作为属性提供
+			- 8.HTML 水平线
+			  collapsed:: true
+				- `<hr>`
+			- 9.HTML 换行符
+			  collapsed:: true
+				- `<br>`
+			- 10.HTML预格式化文本
+			  collapsed:: true
+				- `<pre>`
+			- 11.Image Maps
+			  collapsed:: true
+				- ```html
+				  <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+				  <map name="workmap">
+				    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+				    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+				    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+				  </map>
+				  ```
+			- collapsed:: true
+			  12. <picture>
+				- `<picture>` 元素允许您为不同的设备或屏幕大小显示不同的图片
+				- ```html
+				  <picture>
+				    <source media="(min-width: 650px)" srcset="img_food.jpg">
+				    <source media="(min-width: 465px)" srcset="img_car.jpg">
+				    <img src="img_girl.jpg">
+				  </picture>
+				  ```
+			- 13.favicon
+			  collapsed:: true
+				- ```html
+				  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+				  ```
+			- 14.HTML Title
+			  collapsed:: true
+				- `<title>`
+		- 4.HTML 属性
+		  collapsed:: true
+			- 属性提供HTML元素的附加信息，所有 HTML 元素都可以具有**属性**
+			- `href` 属性指定链接指向的页面的 URL
+			- `src` 属性指定要显示的图像的路径
+			- `style` 属性用于向元素添加样式，例如颜色、字体、大小等
+			- `title` 属性定义有关元素的一些额外信息
+		- 5.HTML 样式
+		  collapsed:: true
+			- HTML `style` 属性用于向元素添加样式，例如颜色、字体、大小等
+			- `<tagname  style="property:value;">`
+		- 6.HTML 文本格式
+		  collapsed:: true
+			- `<b>` - 粗体文本不带重要性
+			- `<strong>` - 重要文本
+			- `<i>` - 斜体文本
+			- `<em>` - 强调的文本
+			- `<mark>` - 已标记的文本
+			- `<small>` - 文本较小
+			- `<del>` - 已删除文本
+			- `<ins>` - 插入的文本
+			- `<sub>` - 下标文本
+			- `<sup>` - 上标文本
+		- 7.HTML 引用
+		  collapsed:: true
+			- `<blockquote>` 元素定义从其他来源引用的章节
+			- `<q>` 标记定义简短的引用，加引号
+			- `<abbr>` 标签定义缩写或首字母缩略词
+			- `<address>` 标签定义文档或文章的作者/所有者的联系信息
+			- `<cite>` 标签定义了创意作品的标题
+			- `<bdo>` 标签用于覆盖当前文本方向
+		- 8.HTML 注释
+		  collapsed:: true
+			- ```html
+			  <!-- Write your comments here -->
+			  ```
+		- 9.HTML 颜色
+		  collapsed:: true
+			- RGB
+				- `rgb(255, 99, 71)`
+			- HEX
+				- `#ff6347`
+			- HSL
+				- `hsl(9, 100%, 64%)`
+		- 10.HTML CSS
+		  collapsed:: true
+			- **内联** - 通过在 HTML 元素中使用 `style` 属性
+			- **内部** - 通过在 `<head> 部分中使用 <style>` 元素
+			- **外部** - 通过使用 `<link>` 元素链接到外部 CSS 文件
+		- 11.HTML Tables
+		  collapsed:: true
+			- `<td>`
+				- Table Cells
+			- `<tr>`
+				- Table rows
+			- `<th>`
+				- Table Headers
+			- `:nth-child(even)`
+				- ```css
+				  tr:nth-child(even) {
+				    background-color: #D6EEEE;
+				  }
+				  ```
+		- 12.HTML Lists
+		  collapsed:: true
+			- `<ul>`
+				- 无序列表
+			- `<ol>`
+				- 有序列表
+			- `<dl>`
+				- 描述列表
+		- 13.HTML Block and Inline Elements
+		  collapsed:: true
+			- block
+				- `<p>`、`<div>`、`<nav>`...
+			- inline
+				- `<span>`、`<a>`...
+		- 14.HTML  DIV\CLASS\ID
+		  collapsed:: true
+			- `<div>`、`<div class="classname">`、`<div id="idname">`
+		- 15.HTML Iframes
+		  collapsed:: true
+			- ```html
+			  <iframe src="url" title="description"></iframe>
+			  ```
+		- 16.HTML Responsive Web Design
+		  collapsed:: true
+			- Setting The Viewport
+			  collapsed:: true
+				- ```html
+				  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				  ```
+			- css width
+			  collapsed:: true
+				- ```html
+				  <img src="img_girl.jpg" style="width:100%;">
+				  ```
+			- <picture>
+			- `vw`、`vh`
+			- Media Queries
+			  collapsed:: true
+				- ```CSS
+				  /* The width is 100%, when the viewport is 800px or smaller */
+				  @media screen and (max-width: 800px) {
+				    .left, .main, .right {
+				      width: 100%; 
+				    }
+				  }
+				  ```
+			- Framework
+				- Bootstrap...
+		- 17.语义化HTML
+		  collapsed:: true
+			- `<header>` - 定义文档或章节的页眉
+			- `<nav>` - 定义一组导航链接
+			- `<section>` - 定义文档中的节
+			- `<article>` - 定义独立的自包含内容
+			- `<aside>` - 定义内容以外的内容（如侧边栏）
+			- `<footer>` - 定义文档或部分的页脚
+			- `<details>` - 定义用户可按需打开和关闭的其他详细信息
+			- `<summary>` - 定义 `<details>` 元素的标题
+			- ![img_sem_elements.gif](../assets/img_sem_elements_1732256896806_0.gif)
+		- 18.HTML 样式指导
+		  collapsed:: true
+			- 1.始终将文档类型声明为文档中的第一行
+			- 2.使用小写元素名称
+			- 3.关闭所有 HTML 元素
+			- 4.使用小写属性名称
+			- 5.始终引用属性值
+			- 6.始终为图像指定 `alt` 属性
+		- 19.HTML 实体符号
+		  collapsed:: true
+			- `空格`-`&nbsp;`
+			- `<` - `&lt;`
+			- `>` - `&gt;`
+			- `©` - `&copy;`
+		- 20.HTML charset
+		  collapsed:: true
+			- ```html
+			  <meta charset="UTF-8">
+			  ```
+		- 21.HTML URL ENCODE
+		  collapsed:: true
+			- url在地址栏里面经过编码
+		- 22.HTML Forms
+		  collapsed:: true
+			- `<form>`
+			  collapsed:: true
+				- `action`
+				- `method`
+				- `autocomplete`
+			- <form> elements
+			  collapsed:: true
+				- `<input>`
+				- `<label>`
+				- `<select>`
+				- `<textarea>`
+				- `<button>`
+				- `<fieldset>`
+				- `<legend>`
+				- `<datalist>`
+					- 预定于选项
+				- `<output>`
+				- `<option>`
+				- `<optgroup>`
+			- input type
+				- `<input type="button">`
+				- `<input type="checkbox">`
+				- `<input type="color">`
+				- `<input type="date">`
+				- `<input type="datetime-local">`
+				- `<input type="email">`
+				- `<input type="file">`
+				- `<input type="hidden">`
+				- `<input type="image">`
+				- `<input type="month">`
+				- `<input type="number">`
+				- `<input type="password">`
+				- `<input type="radio">`
+				- `<input type="range">`
+				- `<input type="reset">`
+				- `<input type="search">`
+				- `<input type="submit">`
+				- `<input type="tel">`
+				- `<input type="text">`
+				- `<input type="time">`
+				- `<input type="url">`
+				- `<input type="week">`
+			-
 	- CSS
+	  collapsed:: true
 		- CSS规则
 		  collapsed:: true
 			- ![image.png](../assets/image_1732168221376_0.png){:height 254, :width 421}
@@ -271,7 +539,6 @@
 		  collapsed:: true
 			- px，rem ，vw，vh
 		- 布局
-		  collapsed:: true
 			- ![image.png](../assets/image_1732175273565_0.png)
 			- 了解display属性
 				- `display:inline`
@@ -325,4 +592,5 @@
 		- 溢出
 		- 背景
 		- 文字和排版
+	-
 -
