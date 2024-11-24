@@ -1,4 +1,5 @@
 - 1.**[How Internet & Websites works](https://github.com/thecodeholic/php-developer-roadmap#how-internet--websites-works)**
+  collapsed:: true
 	- How does the INTERNET work?
 	  collapsed:: true
 		- 9m https://www.youtube.com/watch?v=x3c1ih2NJEg
@@ -10,6 +11,7 @@
 		- 1h 42m
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
 	- https://roadmap.sh/guides/what-is-internet
+	  collapsed:: true
 		- 什么是互联网？
 		  collapsed:: true
 			- 互相连接的计算机组成的全球网络
@@ -43,5 +45,5 @@
 			- 网络安全是指通过使用网络、技术设备和互联网实现的针对犯罪活动的保护措施
 			-
 - 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
--
+	-
 -
