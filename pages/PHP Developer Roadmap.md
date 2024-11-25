@@ -123,6 +123,7 @@
 			- **502 Bad Gateway**
 - 3. Basics of HTML/CSS
 	- HTML
+	  collapsed:: true
 		- 1.什么是HTML
 		  collapsed:: true
 			- 超文本标记语言
@@ -240,6 +241,7 @@
 			  <!-- Write your comments here -->
 			  ```
 		- 9.HTML 颜色
+		  id:: 6743ca50-bb7a-4007-b0d5-008605482356
 		  collapsed:: true
 			- RGB
 				- `rgb(255, 99, 71)`
@@ -393,204 +395,158 @@
 				- `<input type="week">`
 			-
 	- CSS
-	  collapsed:: true
-		- CSS规则
+		- 1.CSS describes how HTML elements should be displayed
+		- 2.基本语法
 		  collapsed:: true
-			- ![image.png](../assets/image_1732168221376_0.png){:height 254, :width 421}
-		- 盒子模型
+			- ![微信截图_20241125102833.jpg](../assets/微信截图_20241125102833_1732501735847_0.jpg)
+		- 3.选择器
 		  collapsed:: true
-			- 核心基础
-			- css显示的所有内容都是一个框
-			- ![box.jpg](../assets/box_1732167979593_0.jpg)
-		- 选择器
-		  collapsed:: true
-			- 使用 CSS 选择器来查找特定元素，然后应用 CSS 规则
-			- 通用选择器
+			- 1.简单选择器
 			  collapsed:: true
-				- 可以和任何元素匹配
-				- ```css
-				  * {
-				    color: hotpink;
-				  }
-				  ```
-			- 类型选择器
-			  collapsed:: true
-				- ```css
-				  section {
-				    padding: 2em;
-				  }
-				  ```
-			- 类选择器
-			  collapsed:: true
-				- 通过HTML元素的class属性匹配
+				- 元素名称
+				- id选择器
+					- id在页面内是唯一的
+				- class
+				- 通用选择期
 					- ```css
-					  .my-class {
-					    color: red;
+					  *{
+					    test-align:center;
 					  }
 					  ```
-			- ID选择器
-			  collapsed:: true
-				- 具有 `id` 属性的 HTML 元素应该是页面上具有该 ID 值的唯一元素
+				- 分组选择器
 					- ```css
-					  #rad {
-					    border: 1px solid blue;
+					  h1, h2, p{
+					    color:res;
 					  }
 					  ```
-			- 属性选择器
+			- 2.组合选择器
 			  collapsed:: true
-				- 查找具有特定 HTML 属性的元素， 或具有某个 HTML 属性的特定值
-					- ```css
-					  [data-type='primary'] {
-					    color: red;
-					  }
-					  /* A href that contains "example.com" */
-					  [href*='example.com'] {
-					    color: red;
-					  }
-					  
-					  /* A href that starts with https */
-					  [href^='https'] {
-					    color: green;
-					  }
-					  
-					  /* A href that ends with .com */
-					  [href$='.com'] {
-					    color: blue;
-					  }
-					  ```
-			- 分组选择器
+				- 元素之间特定关系
+			- 3.伪类选择器
 			  collapsed:: true
-				- ```css
-				  strong,
-				  em,
-				  .my-class,
-				  [lang] {
-				    color: red;
-				  }
-				  ```
-			- 伪类
+				- 根据某种状态
+			- 4.伪元素选择器
 			  collapsed:: true
-				- HTML 元素会各自处于各种状态如点击过，移动过
-				  collapsed:: true
-					- ```css
-					  /* Our link is hovered */
-					  a:hover {
-					    outline: 1px dotted green;
-					  }
-					  
-					  /* Sets all even paragraphs to have a different background */
-					  p:nth-child(even) {
-					    background: floralwhite;
-					  }
-					  ```
-			- 伪元素
+				- 选择元素的一部分并为其设置样式
+		- 4.添加CSS方式
+		  collapsed:: true
+			- 外部css
 			  collapsed:: true
-				- 伪元素与伪类的不同之处在于，它们不会响应平台状态， 就像使用 CSS 插入新元素一样。
-				- ```css
-				  .my-element::before {
-				    content: 'Prefix - ';
-				  }
+				- ```html
+				  <link rel="stylesheet" href="mystyle.css">
 				  ```
-			- 复杂选择器
+			- 内部css
 			  collapsed:: true
-				- 后代选择器
-					- ```css
-					  p strong {
-					    color: blue;
-					  }
-					  ```
-				-
-		- 级联
-		  collapsed:: true
-			- 级联是一种用于解决多个 CSS 规则应用于一个 HTML 元素的冲突的算法
-			- **位置和显示顺序**：CSS 规则的显示顺序
-				- 同一位置，越往后层级越高
-				- 内嵌css > 内联css  > 外联css
-				- 明确性，越明确定位权重就越高
-			- 提高优先级
-				- `!important`
-		- 特异性
-		  collapsed:: true
-			- 更具css特异分值来确定最终元素应用哪个css
-		- 继承
-		  collapsed:: true
-			- 有些 CSS 属性会在您未指定值的情况下沿用
-		- 颜色
-		  collapsed:: true
-			- 16进制颜色
-				- ```css
-				  h1 {
-				    color:#00000;
-				  }
+				- ```html
+				  <style>
+				    body{
+				      background:red;
+				    }
+				  </style>
 				  ```
-			- RGB(红、绿、蓝)颜色
-				- ```css
-				  h1 {
-				    color: rgb(183, 21, 64);
-				  }
+			- 内联css
+			  collapsed:: true
+				- ```html
+				  <p style="color:red;">This is a paragraph.</p>
 				  ```
-			- HSL（色相、饱和度、亮度）颜色
-				- ```css
-				  h1 {
-				    color: hsl(344, 79%, 40%);
-				  }
-				  ```
-		- 尺码单位
+			- 级联顺序
+			  collapsed:: true
+				- 内联css具有最高优先权
+				- 内部css和外部css按页面加载最后面的优先权越高
+		- 5.CSS注释
 		  collapsed:: true
-			- px，rem ，vw，vh
-		- 布局
-			- ![image.png](../assets/image_1732175273565_0.png)
-			- 了解display属性
-				- `display:inline`
-					- 类似与句子中的单词，他们在直线方向上彼此相邻
-					- 不能在内联元素上设置显式的 width 和 height。
-					- 任何块级 margin 和 padding 都将被周围的元素忽略。
-				- `display:block`
-					- 块元素会另外起一行
-					- 遵循block元素所有外边框
-				- `display:flex`
-					- 使盒子成为块级盒子，并将其子项转换为 flex 项。
-					- 这将启用控制对齐、排序和流的 flex 属性
-					- Flexbox 是一种用于一维布局的布局机制。 跨单个轴（水平或垂直）布局。
-				- `display:grid`
-					- Grid 在很多方面都类似于 **flexbox**，但它旨在控制多轴布局而不是单轴布局（垂直或水平空间）
-				- `display:inline-block`
-					- 使用 `inline-block` 会得到一个盒子，它具有块级元素的一些特征，但仍然与文本内联。
-				- `float`
-					- 浮动会影响后续相邻元素的布局，可以在父级元素设置**display： flow-root** 或者后续元素使用clear：both
-				- `Positioning`
-					- `relative`
-						- 根据自身定位
-					- `absolute`
-						- 将元素从当前文档流分离出来
-						- 可以将元素放置在任何你喜欢的位置，在其最近的相对父元素中使用top、right、bottom、left
-						- 周围所有内容会重排填充绝对元素留下的剩余空间
-					- `fixed`
-						- 父元素是根据<html>元素，
-					- `sticky`
-						- 。使用此值时，当视区滚动经过元素时，它将保持锚定到您设置的 `top`、`right`、`bottom` 和 `left` 值
-					- `static`
-						- 元素会根据 HTML 中的书写顺序进行排列，遵循标准块级或内联布局规则。
-		- Flexbox
+			- ```css
+			  /*this is a signle-line comment*/
+			  p {
+			    color:red;
+			  }
+			  ```
+		- 6.CSS颜色
+		  collapsed:: true
+			- {{embed ((6743ca50-bb7a-4007-b0d5-008605482356))}}
 			-
-		- 网格
-		- 逻辑属性
-		- 间距
-		- 伪元素
-		- 伪类
-		- 边框
-		- 阴影
-		- 焦点
-		- Z-index和堆叠上下文
-		- 函数
-		- 渐变
-		- 动画
-		- 滤镜
-		- 混合模式
-		- 列表
-		- 转场效果
-		- 溢出
-		- 背景
-		- 文字和排版
+		- 7.CSS背景
+		  collapsed:: true
+			- ```css
+			  body {
+			     background: #ffffff url("img_tree.png") no-repeat fix top;
+			  }
+			  /*
+			  * background-color
+			  * background-image
+			  * background-repeat
+			  * background-attachment  属性指定背景图像是否应该滚动或固定
+			  * background-position
+			  */
+			  ```
+		- 8.CSS边框
+		  collapsed:: true
+			- ```css
+			  p {
+			    border：5px solid red;
+			    border-radius: 5px;
+			  }
+			  ```
+		- 9.CSS边距
+		  collapsed:: true
+			- ```css
+			  p {
+			    margin: 10px 11px 12px 9px;
+			    /* 上 右 下 左 */
+			  }
+			  ```
+			- Margin Collapse
+				- ```css
+				  h1 {
+				    margin: 0 0 50px 0;
+				  }
+				  h2 {
+				    margin: 20px 0 0 0;
+				  }
+				  /*
+				  *常识似乎表明 <h1> 和 <h2> 之间的垂直边距总计为 70px (50px + 20px)
+				  *但由于边距塌陷，实际边距最终为 50px
+				  */
+				  ```
+		- 10.CSS填充
+		  collapsed:: true
+			- ```css
+			  div {
+			    padding: 25px 50px 75px 100px;/*上右下左*/
+			  }
+			  /*padding 占据宽度，可以使用box-sizing*/
+			  div {
+			    width:300px;
+			    padding:25px;
+			    box-sizing:border-box;
+			  }
+			  ```
+		- 11.CSS   Height, Width and Max-width
+		- 12.CSS盒子模型
+		  background-color:: red
+		  collapsed:: true
+			- ![微信截图_20241125133344.jpg](../assets/微信截图_20241125133344_1732512848222_0.jpg){:height 233, :width 687}
+		- 13.CSS outline
+		- 14.CSS 文本
+		  collapsed:: true
+			- `color`
+			- `text-align`、`text-align-last`
+			- `direction`
+			- `vertical-align`
+			- `text-decoration: none;`
+			- `text-transform`
+			  collapsed:: true
+				- 文本字母大小写转换
+			- `text-indent`           文本缩进
+			- `letter-spacing`   字母间距
+			- `line-height` 行高
+			- `word-spacing` 字间距
+			- `white-space` 文本换行
+			- `text-shadow`文本阴影
+			-
+		- 15.CSS 字体
 	-
+	-
+-
+-
 -
