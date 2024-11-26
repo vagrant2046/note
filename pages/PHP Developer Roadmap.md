@@ -545,7 +545,454 @@
 			- `text-shadow`文本阴影
 			-
 		- 15.CSS 字体
-	-
+		  collapsed:: true
+			- `font-family`
+			- ```css
+			  p {
+			  	font: italic small-caps bold 12px/30px Georgia, serif;
+			  }
+			  ```
+			- `font-style`
+				- normal - 正常
+				- italic - 斜体
+				- oblique - 倾斜的
+			- `font-weight`
+				- normal -正常
+				- bold - 黑体
+			- `font-variant`
+				- 小型大写字体
+			- `font-size`
+				- px
+				- em
+					- em = 像素/16
+				- vw
+					- vw 视口宽度
+		- 16.CSS 链接
+		  collapsed:: true
+			- ```css
+			  a {
+			    color:red;
+			  }
+			  /*
+			  * a:link - 正常的、未访问的链接
+			  * a:visited - 用户访问过的链接
+			  * a:hover - 当用户将鼠标悬停在链接上时出现的链接
+			  * a:active - 单击后立即生成链接
+			  */
+			  ```
+		- 17.CSS 列表
+		  collapsed:: true
+			- 有序列表
+				- `ol`
+			- 无序列表
+				- `ul`
+		- 18.CSS 布局
+		  background-color:: red
+		  collapsed:: true
+			- 块级元素：从新行开始并占据可用全部宽度
+			- `display`
+			- | Value | Description |
+			  | inline | Displays an element as an inline element |
+			  | block | Displays an element as a block element |
+			  | contents | Makes the container disappear, making the child elements children of the element the next level up in the DOM |
+			  | flex | Displays an element as a block-level flex container |
+			  | grid | Displays an element as a block-level grid container |
+			  | inline-block | Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values |
+			  | inline-flex | Displays an element as an inline-level flex container |
+			  | inline-grid | Displays an element as an inline-level grid container |
+			  | inline-table | The element is displayed as an inline-level table |
+			  | list-item | Let the element behave like a <li> element |
+			  | run-in | Displays an element as either block or inline, depending on context |
+			  | table | Let the element behave like a <table> element |
+			  | table-caption | Let the element behave like a <caption> element |
+			  | table-column-group | Let the element behave like a <colgroup> element |
+			  | table-header-group | Let the element behave like a <thead> element |
+			  | table-footer-group | Let the element behave like a <tfoot> element |
+			  | table-row-group | Let the element behave like a <tbody> element |
+			  | table-cell | Let the element behave like a <td> element |
+			  | table-column | Let the element behave like a <col> element |
+			  | table-row | Let the element behave like a <tr> element |
+			  | none | The element is completely removed |
+			  | initial | Sets this property to its default value |
+			  | inherit | Inherits this property from its parent element |
+		- 19.CSS 位置
+		  background-color:: red
+		  collapsed:: true
+			- `position`属性指定用于元素的定位方法的类型（静态、相对、固定、绝对或粘性）
+			- `static`
+				- 静态定位元素不受 top、bottom、left、right 属性的影响。
+			- `relative`
+				- 相对于其正常位置定位
+			- `fixed`
+				- 相对于视口定位，这意味着即使页面滚动，它也始终保持在同一位置。
+			- `absolute`
+				- 相对于最近定位的祖先定位（而不是相对于视口定位，如固定）
+			- `sticky`
+				- 根据用户的滚动位置定位
+		- 20.CSS z-index
+		  collapsed:: true
+			- `z-index`属性指定元素的堆栈顺序（哪个元素应放置在其他元素的前面或后面）
+		- 21.CSS -overflow
+		  collapsed:: true
+			- `overflow`属性指定当元素的内容太大而无法容纳指定区域时是否剪切内容或添加滚动条
+			- `visible` - 默认。溢出不会被剪裁。内容呈现在元素框之外
+			- `hidden` - 溢出被剪裁，其余内容将不可见
+			- `scroll` - 溢出被剪掉，并添加滚动条以查看其余内容
+			- `auto` - 与`scroll`类似，但仅在必要时添加滚动条
+		- 22.CSS 浮动
+		  background-color:: red
+		  collapsed:: true
+			- `float`属性指定元素应如何浮动
+				- `left` - 元素浮动到其容器的左侧
+				- `right` - 元素浮动到其容器的右侧
+				- `none` - 元素不浮动（将仅显示在文本中出现的位置）
+				- `inherit` - 元素继承其父元素的浮点值
+			- `clear`属性指定哪些元素可以浮动在已清除元素旁边以及在哪一侧
+				- `none` - 元素不会被推到左或右浮动元素下方
+				- `left` - 元素被推到左浮动元素下方
+				- `right` - 元素被推到右浮动元素下方
+				- `both` - 元素被推到左浮动元素和右浮动元素下方
+				- `inherit` - 元素从其父元素继承明确的值
+			-
+		- 23.CSS 垂直水平居中
+		  collapsed:: true
+			- ```css
+			  /*padding text-align:center*/
+			  .center {
+			    padding: 70px 0;
+			    border: 3px solid green;
+			    text-align: center;
+			  }
+			  /*使用line-height属性，其值等于height属性*/
+			  .center {
+			    line-height: 200px;
+			    height: 200px;
+			    border: 3px solid green;
+			    text-align: center;
+			  }
+			  /* If the text has multiple lines, add the following: */
+			  .center p {
+			    line-height: 1.5;
+			    display: inline-block;
+			    vertical-align: middle;
+			  }
+			  
+			  /*使用位置变换 使用定位和transform属性 */
+			  .center {
+			    height: 200px;
+			    position: relative;
+			    border: 3px solid green;
+			  }
+			  .center p {
+			    margin: 0;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			  }
+			  /*Flexbox*/
+			  .center {
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    height: 200px;
+			    border: 3px solid green;
+			  }  
+			  ```
+		- 24.CSS 组合器
+		  collapsed:: true
+			- （空格）
+				- 后代组合器
+			- >
+				- 子组合器
+			- +
+				- 下一个同级组合器
+				- 用于选择紧接在另一个特定元素之后的元素
+			- ~
+				- 后续兄弟组合器
+				- 选择指定元素的下一个同级元素的所有元素
+		- 25.CSS 伪类
+		  collapsed:: true
+			- 定义元素的特殊状态
+				- 当用户将鼠标移到元素上时设置元素的样式
+				- 访问过的链接和未访问过的链接的样式不同
+				- 当元素获得焦点时设置其样式
+				- 样式有效/无效/必需/可选表单元素
+		- 26.CSS伪元素
+		  collapsed:: true
+			- 设置元素的第一个字母或行的样式
+			- 在元素之前或之后插入内容
+			- 设置列表项标记的样式
+			- 为对话框后面的视图框设置样式
+			- ```css
+			  h1::before {
+			    content: url(smiley.gif);
+			  }
+			  h1::after {
+			    content: url(smiley.gif);
+			  }
+			  ```
+		- 27.CSS透明度
+		  collapsed:: true
+			- ```css
+			  img {
+			    opacity: 0.5;
+			  }
+			  ```
+		- 28.CSS特异性
+		  collapsed:: true
+			- 特异性层次
+				- **内联样式**- 示例：<h1 style="color: Pink;">
+					- 1000分
+				- **ID** - 示例：\#navbar
+					- 100分
+				- **类、伪类、属性选择器**- 示例：.test、:hover、[href]
+					- 10分
+				- **元素和伪元素**- 示例：h1, ::before
+					- 1分
+		- 29.CSS `!important`
+		  collapsed:: true
+			- 用于增加属性/值的重要性
+			- 使用`!important`规则，它将覆盖该元素上该特定属性的所有先前样式规则！
+		- 30.CSS Flexbox
+		  background-color:: red
+			- 可以参考
+				- https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+				- https://www.ruanyifeng.com/blog/2015/07/flex-examples.html
+			- 在flexbox之前有四种布局模式
+			  collapsed:: true
+				- Block, for sections in a webpage
+				- Inline, for text
+				- Table, for two-dimensional table data
+				- Positioned, for explicit position of an element
+			- 1.flex容器
+			  collapsed:: true
+				- 1.方向换行属性
+				  collapsed:: true
+					- 简写
+						- `flex-flow: row wrap;`
+					- `flex-direction`
+					  collapsed:: true
+						- 属性定义容器想要堆叠弹性项目的方向
+						- ```css
+						  /*从上到下*/
+						  .flex-container {
+						    display: flex;
+						    flex-direction: column;
+						  }
+						  /*从下到上*/
+						  .flex-container {
+						    display: flex;
+						    flex-direction: column-reverse;
+						  }
+						  /*从左至右*/
+						  .flex-container {
+						    display: flex;
+						    flex-direction: row;
+						  }
+						  /*从右至左*/
+						  .flex-container {
+						    display: flex;
+						    flex-direction: row-reverse;
+						  }
+						  ```
+					- `flex-wrap`
+					  collapsed:: true
+						- 指定 Flex 项目是否应该换行
+						- ```css
+						  /*必要的时候正常方向换行*/
+						  .flex-container {
+						    display: flex;
+						    flex-wrap: wrap;
+						  }
+						  /*必要的时候相反方向换行*/
+						  .flex-container {
+						    display: flex;
+						    flex-wrap: wrap-reverse;
+						  }
+						  /*不会换行（默认）*/
+						  .flex-container {
+						    display: flex;
+						    flex-wrap: nowrap;
+						  }
+						  ```
+				- 2.主轴（通常水平）    对齐item属性
+				  collapsed:: true
+					- ```css
+					  /*center值将弹性项目对齐到容器的中心*/
+					  .flex-container {
+					    display: flex;
+					    justify-content: center;
+					  }
+					  /*flex-start值将弹性项目对齐到容器的开头*/
+					  .flex-container {
+					    display: flex;
+					    justify-content: flex-start;
+					  }
+					  /*flex-end值将弹性项目对齐到容器的结尾*/
+					  .flex-container {
+					    display: flex;
+					    justify-content: flex-end;
+					  }
+					  /* space-around 值显示Flex 项目，并在行前、行间和行后留有空格*/
+					  .flex-container {
+					    display: flex;
+					    justify-content: space-around;
+					  }
+					  /*space-between值显示弹性项目，行之间有空格*/
+					  .flex-container {
+					    display: flex;
+					    justify-content: space-between;
+					  }
+					  ```
+				- 3.交叉轴（通常垂直）对齐item属性
+				  collapsed:: true
+					- ```css
+					  /*center值将弹性项目对齐在容器的中间*/
+					  .flex-container {
+					    display: flex;
+					    height: 200px;
+					    align-items: center;
+					  }
+					  /*flex-start值将弹性项目对齐到容器的顶部*/
+					  .flex-container {
+					    display: flex;
+					    height: 200px;
+					    align-items: flex-start;
+					  }
+					  /*flex-end值将弹性项目对齐到容器的底部*/
+					  .flex-container {
+					    display: flex;
+					    height: 200px;
+					    align-items: flex-end;
+					  }
+					  /*stretch值拉伸弹性项目以填充容器（这是默认值）*/
+					  .flex-container {
+					    display: flex;
+					    height: 200px;
+					    align-items: baseline;
+					  }
+					  ```
+				- 4.对齐内容属性
+				  collapsed:: true
+					- 通常用于多行布局，用来控制这些行在交叉轴上的位置
+					- ```css
+					  /*space-between值在行之间均匀分配空间，第一个行和最后一个行对齐容器的两端，其他行在它们之间均匀分布。*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: space-between;
+					  }
+					  /*space-around值在行之间均匀分配空间，但行之间的间隔相等，两端的间隔是间隔的 1/2*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: space-around;
+					  }
+					  /*stretch值行会拉伸以填充整个容器（这是默认值）*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: stretch;
+					  }
+					  /*center值将所有的行居中对齐*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: center;
+					  }
+					  /*将所有的行对齐到容器的交叉轴起始位置（通常是顶部）*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: flex-start;
+					  }
+					  /*将所有的行对齐到容器的交叉轴结束位置（通常是底部）*/
+					  .flex-container {
+					    display: flex;
+					    height: 600px;
+					    flex-wrap: wrap;
+					    align-content: flex-end;
+					  }
+					  ```
+			- 2.flex项目
+				- `order`属性指定弹性项目的顺序
+				- `flex-grow`属性指定 Flex 项目相对于其余 Flex 项目的增长量
+				- `flex-shrink`属性指定 Flex 项目相对于其余 Flex 项目收缩的程度
+				- `flex-basis`属性指定弹性项目的初始长度
+				- 简写
+				  collapsed:: true
+					- `style="flex: 0 0 200px"`
+					- Flex 项目不可增长 (0)、不可收缩 (0)，且初始长度为 200 像素
+				- `align-self`属性指定灵活容器内所选项目的对齐方式
+					- `align-self: center`、`align-self: start`、`align-self: end`
+				-
+		- 31.CSS 响应式网页布局
+		  background-color:: red
+			- 1.设置Viewport
+			  collapsed:: true
+				- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+			- 2.根据视口调整内容大小
+			  collapsed:: true
+				- **1. 不要使用大的固定宽度元素**
+				- **2. 不要让内容依赖于特定视口宽度来良好渲染**
+				- **3. 使用CSS媒体查询为小屏幕和大屏幕应用不同的样式**
+			- 3.网格视图
+			  collapsed:: true
+				- 在设计网页时使用网格视图非常有帮助。它使在页面上放置元素变得更加容易
+				- 响应式网格视图通常有 12 列，总宽度为 100%，并且会随着您调整浏览器窗口的大小而缩小和扩展
+				- 1.确保所有 HTML 元素的`box-sizing`属性设置为`border-box`
+					- 这可确保内边距和边框包含在元素的总宽度和高度中
+					- ```css
+					  * {
+					    box-sizing: border-box;
+					  }
+					  ```
+				- 2.为每一列创建一个类`class="col-"`
+					- ```css
+					  .col-1 {width: 8.33%;}
+					  .col-2 {width: 16.66%;}
+					  .col-3 {width: 25%;}
+					  .col-4 {width: 33.33%;}
+					  .col-5 {width: 41.66%;}
+					  .col-6 {width: 50%;}
+					  .col-7 {width: 58.33%;}
+					  .col-8 {width: 66.66%;}
+					  .col-9 {width: 75%;}
+					  .col-10 {width: 83.33%;}
+					  .col-11 {width: 91.66%;}
+					  .col-12 {width: 100%;}
+					  ```
+				- 3.所有的这些列应该都向左浮动，并具有15px的填充
+					- ```css
+					  [class*="col-"] {
+					    float: left;
+					    padding: 15px;
+					    border: 1px solid red;
+					  }
+					  ```
+				- 4.每行应包含在`<div>`中。行内的列数加起来应始终为 12
+					- ```html
+					  <div class="row">
+					    <div class="col-3">...</div> <!-- 25% -->
+					    <div class="col-9">...</div> <!-- 75% -->
+					  </div>
+					  ```
+				- 5.行内的列全部向左浮动，因此被排除在页面的流程之外，并且其他元素将被放置，就好像这些列不存在一样。为了防止这种情况，我们将添加一个清除流程的样式
+					- ```CSS
+					  .row::after {
+					    content: "";
+					    clear: both;
+					    display: table;
+					  }
+					  ```
+				- ![微信截图_20241126164536.jpg](../assets/微信截图_20241126164536_1732610764181_0.jpg)
+			- 4.
 	-
 -
 -
