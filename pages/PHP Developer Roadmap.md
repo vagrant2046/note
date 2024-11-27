@@ -1,4 +1,4 @@
-- 1.**[How Internet & Websites works](https://github.com/thecodeholic/php-developer-roadmap#how-internet--websites-works)**
+- 1.**How Internet & Websites works**
   collapsed:: true
 	- How does the INTERNET work?
 		- 9m https://www.youtube.com/watch?v=x3c1ih2NJEg
@@ -39,7 +39,7 @@
 			- 非对称加密
 		- 什么是网络安全，有哪些常见的互联网犯罪？
 			- 网络安全是指通过使用网络、技术设备和互联网实现的针对犯罪活动的保护措施
-- 2.**[Browser/Server request flow, HTTP Protocol, Status codes](https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes)**
+- 2.**Browser/Server request flow, HTTP Protocol, Status codes**
   collapsed:: true
 	- HTTP Crash Course & Exploration
 		- https://www.youtube.com/watch?v=iYM2zFP3Zn0
@@ -121,8 +121,8 @@
 				- 未认证
 			- **500 Internal Server Error**
 			- **502 Bad Gateway**
-- collapsed:: true
-  3. Basics of HTML/CSS
+- 3.**Basics of HTML/CSS**
+  collapsed:: true
 	- HTML
 	  collapsed:: true
 		- 1.什么是HTML
