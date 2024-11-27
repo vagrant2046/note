@@ -1292,6 +1292,19 @@
 		- 33.SASS
 			- CSS预处理器
 			- SASS减少了CSS重复，因此节省了时间
-	-
--
+- 4.**Basics of JavaScript**
+	- https://zh.javascript.info/
+	- 1.什么是javascript
+	  collapsed:: true
+		- 开始是专门为浏览器设计的一门语言，但是现在也被用于很多其他的环境
+		- 与 HTML/CSS 完全集成
+	- 2.手册和规范
+	  collapsed:: true
+		- 1.javascript参考
+			- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference
+		- 2.兼容性列表
+			- https://caniuse.com/
+			- https://compat-table.github.io/compat-table/es6/
+	- 3.javascript基础知识
+		-
 -
