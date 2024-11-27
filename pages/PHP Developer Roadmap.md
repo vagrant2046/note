@@ -121,7 +121,8 @@
 				- 未认证
 			- **500 Internal Server Error**
 			- **502 Bad Gateway**
-- 3. Basics of HTML/CSS
+- collapsed:: true
+  3. Basics of HTML/CSS
 	- HTML
 	  collapsed:: true
 		- 1.什么是HTML
@@ -395,6 +396,7 @@
 				- `<input type="week">`
 			-
 	- CSS
+	  collapsed:: true
 		- 1.CSS describes how HTML elements should be displayed
 		- 2.基本语法
 		  collapsed:: true
@@ -756,6 +758,7 @@
 			- 使用`!important`规则，它将覆盖该元素上该特定属性的所有先前样式规则！
 		- 30.CSS Flexbox
 		  background-color:: red
+		  collapsed:: true
 			- 可以参考
 				- https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 				- https://www.ruanyifeng.com/blog/2015/07/flex-examples.html
@@ -934,6 +937,7 @@
 				-
 		- 31.CSS 响应式网页布局
 		  background-color:: red
+		  collapsed:: true
 			- 1.设置Viewport
 			  collapsed:: true
 				- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
@@ -991,9 +995,303 @@
 					    display: table;
 					  }
 					  ```
-				- ![微信截图_20241126164536.jpg](../assets/微信截图_20241126164536_1732610764181_0.jpg)
-			- 4.
+				- ![微信截图_20241126164536.jpg](../assets/微信截图_20241126164536_1732610764181_0.jpg){:height 213, :width 656}
+				- 6.利用媒体查询当浏览器窗口小于768px的时候，每列的宽度应该为100%
+					- ```css
+					  @media only screen and (max-width: 768px) {
+					    /* For mobile phones: */
+					    [class*="col-"] {
+					      width: 100%;
+					    }
+					  }
+					  ```
+			- 4.媒体查询
+				- 当符合特定条件的时候，`@media`规则包含的css属性块生效
+				- ```css
+				  @media only screen and (max-width:600px) {
+				    body {
+				      background-color:lightblue;
+				    }
+				  }
+				  ```
+				- 移动优先，可以考虑在页面大于768px的时候更改
+					- ```css
+					  /* For mobile phones: */
+					  [class*="col-"] {
+					    width: 100%;
+					  }
+					  
+					  @media only screen and (min-width: 768px) {
+					    /* For desktop: */
+					    .col-1 {width: 8.33%;}
+					    .col-2 {width: 16.66%;}
+					    .col-3 {width: 25%;}
+					    .col-4 {width: 33.33%;}
+					    .col-5 {width: 41.66%;}
+					    .col-6 {width: 50%;}
+					    .col-7 {width: 58.33%;}
+					    .col-8 {width: 66.66%;}
+					    .col-9 {width: 75%;}
+					    .col-10 {width: 83.33%;}
+					    .col-11 {width: 91.66%;}
+					    .col-12 {width: 100%;}
+					  }
+					  ```
+				- 对于介于手机和桌面之间的产品
+					- ```css
+					  /* For mobile phones: */
+					  [class*="col-"] {
+					    width: 100%;
+					  }
+					  
+					  @media only screen and (min-width: 600px) {
+					    /* For tablets: */
+					    .col-s-1 {width: 8.33%;}
+					    .col-s-2 {width: 16.66%;}
+					    .col-s-3 {width: 25%;}
+					    .col-s-4 {width: 33.33%;}
+					    .col-s-5 {width: 41.66%;}
+					    .col-s-6 {width: 50%;}
+					    .col-s-7 {width: 58.33%;}
+					    .col-s-8 {width: 66.66%;}
+					    .col-s-9 {width: 75%;}
+					    .col-s-10 {width: 83.33%;}
+					    .col-s-11 {width: 91.66%;}
+					    .col-s-12 {width: 100%;}
+					  }
+					  
+					  @media only screen and (min-width: 768px) {
+					    /* For desktop: */
+					    .col-1 {width: 8.33%;}
+					    .col-2 {width: 16.66%;}
+					    .col-3 {width: 25%;}
+					    .col-4 {width: 33.33%;}
+					    .col-5 {width: 41.66%;}
+					    .col-6 {width: 50%;}
+					    .col-7 {width: 58.33%;}
+					    .col-8 {width: 66.66%;}
+					    .col-9 {width: 75%;}
+					    .col-10 {width: 83.33%;}
+					    .col-11 {width: 91.66%;}
+					    .col-12 {width: 100%;}
+					  }
+					  ```
+					- 示例
+						- ```html
+						  <!-- 对于桌面第一第三部分跨3列，中间跨6列-->
+						  <!-- 对于手机第一第跨3列，第二部分跨9列，第三部分跨12列-->
+						  <div class="row">
+						    <div class="col-3 col-s-3">...</div>
+						    <div class="col-6 col-s-9">...</div>
+						    <div class="col-3 col-s-12">...</div>
+						  </div>
+						  ```
+				- 常见的设备
+					- ```css
+					  /* Extra small devices (phones, 600px and down) */
+					  @media only screen and (max-width: 600px) {...}
+					  
+					  /* Small devices (portrait tablets and large phones, 600px and up) */
+					  @media only screen and (min-width: 600px) {...}
+					  
+					  /* Medium devices (landscape tablets, 768px and up) */
+					  @media only screen and (min-width: 768px) {...}
+					  
+					  /* Large devices (laptops/desktops, 992px and up) */
+					  @media only screen and (min-width: 992px) {...}
+					  
+					  /* Extra large devices (large laptops and desktops, 1200px and up) */
+					  @media only screen and (min-width: 1200px) {...}
+					  ```
+				- 方向：纵向/横向
+				  collapsed:: true
+					- ```css
+					  @media only screen and (orientation: landscape) {
+					    body {
+					      background-color: lightblue;
+					    }
+					  }
+					  ```
+				- 隐藏元素
+				  collapsed:: true
+					- ```css
+					  /* If the screen size is 600px wide or less, hide the element */
+					  @media only screen and (max-width: 600px) {
+					    div.example {
+					      display: none;
+					    }
+					  }
+					  ```
+				- 改变字体大小
+					- ```css
+					  /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+					  @media only screen and (min-width: 601px) {
+					    div.example {
+					      font-size: 80px;
+					    }
+					  }
+					  
+					  /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+					  @media only screen and (max-width: 600px) {
+					    div.example {
+					      font-size: 30px;
+					    }
+					  }
+					  ```
+			- 5.图片
+			  collapsed:: true
+				- ```css
+				  img {
+				    max-width: 100%;
+				    height: auto;
+				  }
+				  /*大图像在大计算机屏幕上可能很完美，但在小设备上毫无用处*/
+				  /* For width smaller than 400px: */
+				  body {
+				    background-image: url('img_smallflower.jpg');
+				  }
+				  /* For width 400px and larger: */
+				  @media only screen and (min-width: 400px) {
+				    body {
+				      background-image: url('img_flowers.jpg');
+				    }
+				  }
+				  ```
+				- ```html
+				  <!--<picture>元素为 Web 开发人员指定图像资源提供了更大的灵活性-->
+				  <picture>
+				    <source srcset="img_smallflower.jpg" media="(max-width: 400px)">
+				    <source srcset="img_flowers.jpg">
+				    <img src="img_flowers.jpg" alt="Flowers">
+				  </picture>
+				  ```
+			- 6.视频
+				- ```css
+				  video {
+				    max-width: 100%;
+				    height: auto;
+				  }
+				  ```
+		- 32.CSS Grid
+		  background-color:: red
+		  collapsed:: true
+			- ```css
+			  .grid-container {
+			    display: grid;
+			  }
+			  .grid-container {
+			    display: inline-grid;
+			  }
+			  ```
+			- `column-gap` 列间隔
+			- `row-gap` 行间隔
+			- `gap` 全部间隔
+			- 列线和行线
+			  collapsed:: true
+				- ```css
+				  .item1 {
+				    grid-column-start: 1;
+				    grid-column-end: 3;
+				  }
+				  .item1 {
+				    grid-row-start: 1;
+				    grid-row-end: 3;
+				  }
+				  ```
+			- 网格容器
+				- `grid-template-columns`属性定义网格布局中的列数，并且可以定义每列的宽度。
+				- ```css
+				  .grid-container {
+				    display: grid;
+				    grid-template-columns: auto auto auto auto;
+				  }
+				  .grid-container {
+				    display: grid;
+				    grid-template-columns: 80px 200px auto 40px;
+				  }
+				  ```
+				- `grid-template-rows`属性定义每行的高度
+				  collapsed:: true
+					- ```css
+					  .grid-container {
+					    display: grid;
+					    grid-template-rows: 80px 200px;
+					  }
+					  ```
+				- `justify-content`属性用于对齐容器内的整个网格
+				  collapsed:: true
+					- ```css
+					  .grid-container {
+					    display: grid;
+					    justify-content: space-evenly;
+					  }
+					  .grid-container {
+					    display: grid;
+					    justify-content: space-between;
+					  }
+					  .grid-container {
+					    display: grid;
+					    justify-content: center;
+					  }
+					  ```
+				- `align-content`属性用于*垂直*对齐容器内的整个网格。
+				  collapsed:: true
+					- ```css
+					  .grid-container {
+					    display: grid;
+					    height: 400px;
+					    align-content: center;
+					  }
+					  .grid-container {
+					    display: grid;
+					    height: 400px;
+					    align-content: space-evenly;
+					  }
+					  .grid-container {
+					    display: grid;
+					    height: 400px;
+					    align-content: space-around;
+					  }
+					  .grid-container {
+					    display: grid;
+					    height: 400px;
+					    align-content: space-between;
+					  }
+					  ```
+				- `grid-column`属性定义在哪一列上放置项目
+				  collapsed:: true
+					- `grid-column`属性是`grid-column-start`和`grid-column-end`属性的简写属性
+					- ```css
+					  .item1 {
+					    grid-column: 1 / 5;
+					  }
+					  .item2 {
+					    grid-column: 2 / span 3;
+					  }
+					  ```
+				- `grid-row`属性定义将项目放置在哪一行
+				  collapsed:: true
+					- `grid-row`属性是`grid-row-start`和`grid-row-end`属性的简写属性
+					- ```css
+					  .item1 {
+					    grid-row: 1 / 4;
+					  }
+					  .item1 {
+					    grid-row: 1 / span 2;
+					  }
+					  ```
+				- `grid-area`属性可以用作 `grid-row-start` 、 `grid-column-start` 、 `grid-row-end`和`grid-column-end`属性
+					- ```css
+					  .item8 {
+					    grid-area: 1 / 2 / 5 / 6;
+					  }
+					  .item8 {
+					    grid-area: 2 / 1 / span 2 / span 3;
+					  }
+					  ```
+		- 33.SASS
+			- CSS预处理器
+			- SASS减少了CSS重复，因此节省了时间
 	-
--
 -
 -
