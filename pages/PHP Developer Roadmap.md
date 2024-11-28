@@ -1299,12 +1299,136 @@
 		- 开始是专门为浏览器设计的一门语言，但是现在也被用于很多其他的环境
 		- 与 HTML/CSS 完全集成
 	- 2.手册和规范
-	  collapsed:: true
 		- 1.javascript参考
 			- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference
 		- 2.兼容性列表
 			- https://caniuse.com/
 			- https://compat-table.github.io/compat-table/es6/
 	- 3.javascript基础知识
+		- Hello world!
+		  collapsed:: true
+			- `<script>`标签
+			  collapsed:: true
+				- ```js
+				  <script>
+				    alert('hello world!');
+				  </script>
+				  ```
+			- 外部脚本
+			  collapsed:: true
+				- `<script src="/path/to/script.js"></script>`
+			- `type` 和 `language` 特性（attribute）不是必需的
+		- 代码结构
+		  collapsed:: true
+			- 分号
+				- 即使语句被换行符分隔了，我们依然建议在它们之间加分号
+			- 注释
+				- **单行注释以两个正斜杠字符 `//` 开始**
+				- **多行注释以一个正斜杠和星号开始 `“/*”` 并以一个星号和正斜杠结束 `“*/”`**
+		- 现代模式，“use strict”
+		  collapsed:: true
+			- `use strict`明确地激活ES5 规范
+			- 放在脚本最顶部
+		- 变量
+		  collapsed:: true
+			- 数据的命名存储
+				- 将变量想象成一个“数据”的盒子，盒子上有一个唯一的标注盒子名字的贴纸
+			- `let` 关键字创建变量
+			- `var` — 老旧的变量声明方式。一般情况下，我们不会再使用它。
+			- 变量命名
+				- 1.必须仅包含字母、数字、符号 $ 和 _
+				- 2.首字母必须非数字
+				- 3.区分大小写
+				- 4.允许非英文字母，但不推荐
+				- 5.保留字
+					- 比如 `let`、`class`、`return`、`function`无法做变量名
+			- 常量
+				- `const`
+				- 常量不能被更改
+				- 大写还是小写，根据常量在执行之前是否已知
+					- ```js
+					  const COLOR_RED = "#F00";
+					  const pageLoadTime = /*网页加载所需时间*/
+					  ```
+			-
+			-
+		- 数据类型
+		  collapsed:: true
+			- Number 类型
+			  collapsed:: true
+				- 整数和浮点数
+				- `Infinity`
+					- 代表无穷大 ∞
+				- `NaN`
+					- 代表一个计算错误
+				-
+			- BigInt     类型
+			  collapsed:: true
+				- 表示任意长度的整数
+				- 因为Number类型下，超出安全整数范围 `±(253-1)` 会出现精度问题
+				- ```js
+				  // 尾部的 "n" 表示这是一个 BigInt 类型
+				  const bigInt = 1234567890123456789012345678901234567890n;
+				  ```
+			- String      类型
+			  collapsed:: true
+				- 双引号：`"Hello"`
+				- 单引号：`'Hello'`
+				- 反引号：``Hello``
+				  collapsed:: true
+					- 反引号是 **功能扩展** 引号。它们允许我们通过将变量和表达式包装在 `${…}` 中，来将它们嵌入到字符串中
+					- ```js
+					  let str = "Hello";
+					  let str2 = 'Single quotes are ok too';
+					  let phrase = `can embed another ${str}`;
+					  ```
+			- Boolean  类型
+			  collapsed:: true
+				- `true` 和 `false`
+			- null 值
+			  collapsed:: true
+				- `null` 仅仅是一个代表“无”、“空”或“值未知”的特殊值
+			- undefined 值
+			  collapsed:: true
+				- `undefined` 的含义是 `未被赋值`
+			- Object类型和Symbol类型
+			  collapsed:: true
+				- 其他所有的数据类型都被称为“原始类型”，因为它们的值只包含一个单独的内容（字符串、数字或者其他）。相反，`object` 则用于储存数据集合和更复杂的实体。
+				- `symbol` 类型用于创建对象的唯一标识符
+			- typeof 运算符
+			  collapsed:: true
+				- 返回参数的类型。
+		- 交互：alert、prompt和confirm
+		  collapsed:: true
+			- **prompt**
+				- 显示信息要求用户输入文本。点击确定返回文本，点击取消或按下 Esc 键返回 `null`
+			- **confirm**
+				- 显示信息等待用户点击确定或取消。点击确定返回 `true`，点击取消或按下 Esc 键返回 `false`。
+				-
+		- 类型转换
+		  collapsed:: true
+			- 大多数情况下，运算符和函数会自动将赋予它们的值转换为正确的类型
+			- 字符串转换
+				- `String(value)`
+			- 数字型转换
+			  collapsed:: true
+				- 在算术函数和表达式中，会自动进行 number 类型转换
+				- `Number(value)`
+				- 转换规则
+					- `undefined` -> `NaN`
+					- `null` -> `0`
+					- `true`和`false` ->  `1`和`0`
+					- `string` -> 去掉首尾空白字符（空格、换行符 `\n`、制表符 `\t` 等）后的纯数字字符串中含有的数字。如果剩余字符串为空，则转换结果为 `0`。否则，将会从剩余字符串中“读取”数字。当类型转换出现 error 时返回 `NaN`
+			- 布尔型转换
+			  collapsed:: true
+				- 直观上为“空”的值（如 `0`、空字符串、`null`、`undefined` 和 `NaN`）将变为 `false`
+				- 其他值变成 `true`
+		- 基础运算符，数学运算
+			- 加法 `+`,
+			- 减法 `-`,
+			- 乘法 `*`,
+			- 除法 `/`,
+			- 取余 `%`,
+			- 求幂 `**`
 		-
 -
