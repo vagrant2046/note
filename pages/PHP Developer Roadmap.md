@@ -9,9 +9,11 @@
 		- [https://youtu.be/zN8YNNHcaZc](https://youtu.be/zN8YNNHcaZc)
 	- https://roadmap.sh/guides/what-is-internet
 		- 什么是互联网？
+		  collapsed:: true
 			- 互相连接的计算机组成的全球网络
 			- 通过标准化的协议进行通信
 		- 信息如何在互联网上传输？
+		  collapsed:: true
 			- Internet 上的信息通过各种介质（包括以太网电缆、光纤电缆和无线信号（即无线电波））以比特的形式从一台计算机移动到另一台计算机。
 		- 网络如何互相通信，以及其中的协议？
 			- IP
@@ -22,6 +24,7 @@
 				- IP和域名的映射表
 			-
 		- 数据包、路由器和可靠性之间有什么关系？
+		  collapsed:: true
 			- 数据包
 				- 网络上传输的数据包不需要遵循固定路径
 				- 数据包可以分成多个小包按不同路径抵达目的地
@@ -55,6 +58,7 @@
 			- 代理服务器和隧道
 			- 会话
 		- HTTP流
+		  collapsed:: true
 			- 1.打开一个 TCP 连接
 				- TCP 连接被用来发送一条或多条请求，以及接受响应消息。
 			- 2.发送一个 HTTP 报文
@@ -78,6 +82,7 @@
 				  ```
 			- 4.关闭连接或者为后续请求重用连接
 		- HTTP报文
+		  collapsed:: true
 			- ![http.png](../assets/http_1731895549028_0.png){:height 253, :width 357}
 			- HTTP方法
 				- GET、POST
@@ -86,6 +91,7 @@
 			- 为服务端表达其他信息的可选标头
 			- 请求体（body），类似于响应中的请求体，一些像 `POST` 这样的方法，请求体内包含需要了发送的资源。
 		- HTTP响应
+		  collapsed:: true
 			- ![respond.png](../assets/respond_1731895736221_0.png){:height 231, :width 451}
 			- HTTP 协议版本号
 			- 状态码
@@ -93,6 +99,7 @@
 			- HTTP标头
 			- 可选项
 		- HTTP状态码
+		  collapsed:: true
 			- *1xx 信息性响应* – 请求已接收，正在继续处理
 			- *2xx 成功* – 请求已成功接收、理解并接受
 			- *3xx 重定向* – 需要采取进一步的措施以完成请求
@@ -388,7 +395,6 @@
 				- `<input type="week">`
 			-
 	- CSS
-	  collapsed:: true
 		- 1.CSS describes how HTML elements should be displayed
 		- 2.基本语法
 		  collapsed:: true
@@ -929,7 +935,6 @@
 				-
 		- 31.CSS 响应式网页布局
 		  background-color:: red
-		  collapsed:: true
 			- 1.设置Viewport
 			  collapsed:: true
 				- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
