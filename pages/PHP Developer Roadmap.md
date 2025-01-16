@@ -54,6 +54,7 @@
 			- 代理服务器和隧道
 			- 会话
 		- HTTP流
+		  collapsed:: true
 			- 1.打开一个 TCP 连接
 				- TCP 连接被用来发送一条或多条请求，以及接受响应消息。
 			- 2.发送一个 HTTP 报文
@@ -77,6 +78,7 @@
 				  ```
 			- 4.关闭连接或者为后续请求重用连接
 		- HTTP报文
+		  collapsed:: true
 			- ![http.png](../assets/http_1731895549028_0.png){:height 253, :width 357}
 			- HTTP方法
 				- GET、POST
@@ -85,6 +87,7 @@
 			- 为服务端表达其他信息的可选标头
 			- 请求体（body），类似于响应中的请求体，一些像 `POST` 这样的方法，请求体内包含需要了发送的资源。
 		- HTTP响应
+		  collapsed:: true
 			- ![respond.png](../assets/respond_1731895736221_0.png){:height 231, :width 451}
 			- HTTP 协议版本号
 			- 状态码
@@ -92,6 +95,7 @@
 			- HTTP标头
 			- 可选项
 		- HTTP状态码
+		  collapsed:: true
 			- *1xx 信息性响应* – 请求已接收，正在继续处理
 			- *2xx 成功* – 请求已成功接收、理解并接受
 			- *3xx 重定向* – 需要采取进一步的措施以完成请求
@@ -386,7 +390,6 @@
 				- `<input type="week">`
 			-
 	- CSS
-	  collapsed:: true
 		- 1.CSS describes how HTML elements should be displayed
 		- 2.基本语法
 		  collapsed:: true
@@ -927,7 +930,6 @@
 				-
 		- 31.CSS 响应式网页布局
 		  background-color:: red
-		  collapsed:: true
 			- 1.设置Viewport
 			  collapsed:: true
 				- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
