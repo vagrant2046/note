@@ -395,6 +395,7 @@
 				- `<input type="week">`
 			-
 	- CSS
+	  collapsed:: true
 		- 1.CSS describes how HTML elements should be displayed
 		- 2.基本语法
 		  collapsed:: true
@@ -1290,7 +1291,6 @@
 			- CSS预处理器
 			- SASS减少了CSS重复，因此节省了时间
 - 4.**Basics of JavaScript**
-  collapsed:: true
 	- https://zh.javascript.info/
 	- 1.什么是javascript
 	  collapsed:: true
@@ -1457,4 +1457,5 @@
 					  }
 					  ```
 		-
+-
 -
